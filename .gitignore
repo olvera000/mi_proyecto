@@ -23,6 +23,7 @@ out/
 # Entornos / Config
 .env
 .env.*
+!.env.example
 
 # IDEs / Editores
 .idea/
@@ -32,4 +33,3 @@ out/
 # Codex CLI
 .codex/
 AGENTS.md
-
