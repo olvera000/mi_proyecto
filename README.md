@@ -95,6 +95,7 @@ Hola, Mundo!
 ```
 
 Ejemplo rápido en mayúsculas: `python src/main.py -n Mundo -U`
+Ejemplo repetir N veces: `python src/main.py -n Mundo -t 3`
 
 ### Variables de entorno
 
