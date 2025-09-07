@@ -16,11 +16,6 @@ mi_proyecto/
 ├── README.md
 ├── src/
 │   └── main.py
-├── tests/
-│   └── test_main.py
-├── docs/
-│   └── notas.md
-├── requirements.txt
 └── .env.example
 
 ## ⚙️ Requisitos
@@ -80,12 +75,9 @@ Pequeño script de ejemplo en `src/main.py` con una función `greet` y un `main(
 ### Instalación rápida
 
 ```bash
-# Crear y activar entorno virtual (Windows PowerShell)
+# (Opcional) Crear y activar entorno virtual (Windows PowerShell)
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-
-# Instalar dependencias (si las hubiera)
-pip install -r requirements.txt
 ```
 
 ### Ejecutar
@@ -103,3 +95,5 @@ Hola, Mundo!
 ### Variables de entorno
 
 Usa `.env.example` como referencia para variables de entorno. Crea un archivo `.env` (que está ignorado por Git) si necesitas configurar valores locales.
+
+No hay dependencias externas por ahora; el script usa solo la librería estándar.
