@@ -80,6 +80,8 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
+Instalar dependencias: `pip install -r requirements.txt`
+
 ### Ejecutar
 
 ```bash
