@@ -94,6 +94,8 @@ Salida esperada:
 Hola, Mundo!
 ```
 
+Ejemplo rápido en mayúsculas: `python src/main.py -n Mundo -U`
+
 ### Variables de entorno
 
 Usa `.env.example` como referencia para variables de entorno. Crea un archivo `.env` (que está ignorado por Git) si necesitas configurar valores locales.
