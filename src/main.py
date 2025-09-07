@@ -39,13 +39,21 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Imprime el saludo en MAYÚSCULAS",
     )
+    parser.add_argument(
+        "--times",
+        "-t",
+        type=int,
+        default=1,
+        help="Número de repeticiones del saludo (por defecto: 1)",
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
-    print(greet(args.name, uppercase=args.uppercase))
+    for _ in range(args.times):
+        print(greet(args.name, uppercase=args.uppercase))
     return 0
 
 
