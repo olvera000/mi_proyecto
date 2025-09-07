@@ -10,17 +10,19 @@ import argparse
 import sys
 
 
-def greet(name: str = "Mundo") -> str:
+def greet(name: str = "Mundo", uppercase: bool = False) -> str:
     """Return a friendly greeting.
 
     Args:
         name: Optional name to include in the greeting.
+        uppercase: If True, return the greeting in uppercase.
 
     Returns:
         A greeting string.
     """
 
-    return f"Hola, {name}!"
+    message = f"Hola, {name}!"
+    return message.upper() if uppercase else message
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -31,13 +33,19 @@ def build_parser() -> argparse.ArgumentParser:
         default="Mundo",
         help="Nombre a saludar (por defecto: Mundo)",
     )
+    parser.add_argument(
+        "--uppercase",
+        "-U",
+        action="store_true",
+        help="Imprime el saludo en MAYÚSCULAS",
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
-    print(greet(args.name))
+    print(greet(args.name, uppercase=args.uppercase))
     return 0
 
 
