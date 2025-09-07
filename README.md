@@ -14,13 +14,22 @@ El objetivo es contar con un entorno de trabajo aislado, versionado con Git y co
 mi_proyecto/
 ├── .gitignore
 ├── README.md
-└── (archivos que se vayan generando con Codex)
+├── src/
+│   └── main.py
+├── tests/
+│   └── test_main.py
+├── docs/
+│   └── notas.md
+├── requirements.txt
+└── .env.example
 
 ## ⚙️ Requisitos
 - Windows 11  
 - [Git](https://git-scm.com/) instalado  
 - Clave SSH configurada en GitHub  
 - [Codex CLI](https://www.npmjs.com/package/@openai/codex) instalado  
+
+> Para ejecutar el ejemplo en Python: tener [Python 3.9+](https://www.python.org/) instalado.
 
 ## ▶️ Uso
 1. Clona el repositorio:
@@ -61,3 +70,36 @@ Salir de Codex:
 quit
 
 o presionando Ctrl+C.
+
+---
+
+## 🐍 Aplicación Python (ejemplo)
+
+Pequeño script de ejemplo en `src/main.py` con una función `greet` y un `main()` ejecutable desde la línea de comandos.
+
+### Instalación rápida
+
+```bash
+# Crear y activar entorno virtual (Windows PowerShell)
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+# Instalar dependencias (si las hubiera)
+pip install -r requirements.txt
+```
+
+### Ejecutar
+
+```bash
+python src/main.py --name "Mundo"
+```
+
+Salida esperada:
+
+```
+Hola, Mundo!
+```
+
+### Variables de entorno
+
+Usa `.env.example` como referencia para variables de entorno. Crea un archivo `.env` (que está ignorado por Git) si necesitas configurar valores locales.
